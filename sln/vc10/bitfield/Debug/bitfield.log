@@ -1,0 +1,19 @@
+﻿Построение начато 16.10.2016 13:37:01.
+     1>Проект "C:\Users\Владислав\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\bitfield.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\tset.cpp
+         tset.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Владислав\mp2-lab1-set\sln\vc10\Debug\bitfield.lib" /NOLOGO Debug\tbitfield.obj
+         Debug\tset.obj
+         bitfield.vcxproj -> C:\Users\Владислав\mp2-lab1-set\sln\vc10\Debug\bitfield.lib
+       FinalizeBuildStatus:
+         Файл "Debug\bitfield.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\bitfield.lastbuildstate".
+     1>Построение проекта "C:\Users\Владислав\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.48
