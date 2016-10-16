@@ -309,3 +309,53 @@ TEST(TBitField, bitfields_with_different_bits_are_not_equal)
 
   EXPECT_NE(bf1, bf2);
 }
+
+
+TEST(TBitField, can_create_bitfield_with_zero_length) //свой тест
+{
+  ASSERT_NO_THROW(TBitField bf(0));
+}
+
+TEST(TBitField, or_operator_applied_to_bitfields_of_equal_size_three_bitfields) //свой тест
+{
+  const int size = 6;
+  TBitField bf11(size), bf22(size), bf33(size), expBf1(size);
+  // bf1 = 100100
+  bf11.SetBit(0);
+  bf11.SetBit(3);
+  // bf2 = 010100
+  bf22.SetBit(1);
+  bf22.SetBit(3);
+  //bf3 = 110010
+  bf33.SetBit(0);
+  bf33.SetBit(1);
+  bf33.SetBit(4);
+  //expBf = 110110
+  expBf1.SetBit(0);
+  expBf1.SetBit(1);
+  expBf1.SetBit(3);
+  expBf1.SetBit(4);
+
+  EXPECT_EQ(expBf1, (bf11 | bf22 | bf33));
+}
+
+TEST(TBitField, and_operator_applied_to_bitfields_of_equal_size_three_bitfields) //свой тест
+{
+  const int size = 6;
+  TBitField bf11(size), bf22(size), bf33(size), expBf1(size);
+  // bf1 = 100100
+  bf11.SetBit(0);
+  bf11.SetBit(3);
+  // bf2 = 010100
+  bf22.SetBit(1);
+  bf22.SetBit(3);
+  //bf3 =  110110
+  bf33.SetBit(0);
+  bf33.SetBit(1);
+  bf33.SetBit(3);
+  bf33.SetBit(4);
+  //expBf = 000100
+  expBf1.SetBit(3);
+
+  EXPECT_EQ(expBf1, (bf11 & bf22 & bf33));
+}
