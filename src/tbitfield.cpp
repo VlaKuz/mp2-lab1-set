@@ -223,6 +223,6 @@ ostream &operator<<(ostream &ostr, const TBitField &bf) // вывод
 		if (bf.GetBit(i))
 			ostr<<'1';
 		else
-			ostr<<'1';
+			ostr<<'0';
 	return ostr;
 }
